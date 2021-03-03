@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Class_Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace S2_individuele_project_CSGO_case_opening_app
         public Homepage()
         {
             InitializeComponent();
+            TestDatabaseManager dbMan = new TestDatabaseManager();
+
+            var tests = dbMan.GetAllTest();
+
+            foreach (var test in tests)
+            {
+                Console.WriteLine(test);
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

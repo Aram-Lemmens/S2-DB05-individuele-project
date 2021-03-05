@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -6,14 +7,14 @@ namespace Class_Library
 {
     public class TestDatabaseManager
     {
-        string connectionString = "Server=studmysql01.fhict.local;Uid=dbi460546;Database=dbi460546;Pwd=yourPassword;";
+        string connectionString = "Server=studmysql01.fhict.local; Database=dbi460546; Uid=dbi460546; Pwd=Pmn7KpCjdB";
         public List<TestDto> GetAllTest()
         {
             List<TestDto> test = new List<TestDto>();
 
-            using(SqlConnection conn = new SqlConnection(connectionString))
+            using(MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                using(SqlCommand query = new SqlCommand("select * from test", conn))
+                using(MySqlCommand query = new MySqlCommand("select * from test", conn))
                 {
                     conn.Open();
 

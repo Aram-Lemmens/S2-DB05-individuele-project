@@ -17,7 +17,7 @@ namespace S2_individuele_project_CSGO_case_opening_app
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homepage());
+            Application.Run(new Loginpage());
         }
     }
 }

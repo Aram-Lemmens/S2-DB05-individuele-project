@@ -42,11 +42,44 @@ namespace S2_individuele_project_CSGO_case_opening_app
             {
                 MessageBox.Show(Convert.ToString(test));
             }
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Caseopeningpage COP = new Caseopeningpage();
+            COP.Show();
+            this.Hide();
         }
     }
 }

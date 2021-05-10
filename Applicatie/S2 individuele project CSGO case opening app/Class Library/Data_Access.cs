@@ -5,14 +5,18 @@ using System.Data.SqlClient;
 
 namespace Class_Library
 {
-    public class TestDatabaseManager
+    public class DatabaseManager
     {
-        string connectionString = "Server=studmysql01.fhict.local;Uid=dbi460546;Database=dbi460546;Pwd=Pmn7KpCjdB";
+        public string Getconn()
+        {
+            string connectionString = "Server=studmysql01.fhict.local;Uid=dbi460546;Database=dbi460546;Pwd=Pmn7KpCjdB";
+            return connectionString;
+        }
         public List<TestDto> GetAllTest()
         {
             List<TestDto> test = new List<TestDto>();
 
-            using(MySqlConnection conn = new MySqlConnection(connectionString))
+            using(MySqlConnection conn = new MySqlConnection(Getconn()))
             {
                 using(MySqlCommand query = new MySqlCommand("select * from test", conn))
                 {
@@ -38,7 +42,7 @@ namespace Class_Library
         {
             List<userDto> user = new List<userDto>();
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(Getconn()))
             {
                 using (MySqlCommand query = new MySqlCommand("select * from user", conn))
                 {

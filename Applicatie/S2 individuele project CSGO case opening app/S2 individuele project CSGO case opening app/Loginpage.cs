@@ -12,8 +12,8 @@ namespace S2_individuele_project_CSGO_case_opening_app
 {
     public partial class Loginpage : Form
     {
-        TestDatabaseManager ULogin = new TestDatabaseManager();
-        AddNewAccount adduser = new AddNewAccount();
+        DatabaseManager ULogin = new DatabaseManager();
+        Login adduser = new Login();
         public Loginpage()
         {
             InitializeComponent();
@@ -21,13 +21,6 @@ namespace S2_individuele_project_CSGO_case_opening_app
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            //var username = ULogin.GetAllUsers();
-            //Trace.WriteLine(ULogin.GetAllUsers());
-            //foreach (var user in username)
-            //{
-            //    MessageBox.Show(Convert.ToString(user));
-            //}
             if(adduser.GetAllUsers(email_txt.Text, password_txt.Text) != null)
             {                
                 Homepage HP = new Homepage();
